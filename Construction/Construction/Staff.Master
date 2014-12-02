@@ -1,0 +1,104 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Staff.Master.cs" Inherits="Construction.Staff" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Construction</title>
+    <script type="text/javascript" src="Script/script.js"></script>
+    <link rel="stylesheet" href="Style/style.css" type="text/css" media="screen" />
+</head>
+<body>
+<form runat="server" id="frm">
+<div class="PageBackgroundSimpleGradient">
+    </div>
+    <div class="PageBackgroundGlare">
+        <div class="PageBackgroundGlareImage"></div>
+    </div>
+    <div class="Main">
+        <div class="Sheet">
+            <div class="Sheet-tl"></div>
+            <div class="Sheet-tr"></div>
+            <div class="Sheet-bl"></div>
+            <div class="Sheet-br"></div>
+            <div class="Sheet-tc"></div>
+            <div class="Sheet-bc"></div>
+            <div class="Sheet-cl"></div>
+            <div class="Sheet-cr"></div>
+            <div class="Sheet-cc"></div>
+            <div class="Sheet-body">
+                <div class="Header">
+                    <div class="Header-png"></div>
+                    <div class="Header-jpeg" style="left: 0px; top: 0px"></div>
+                    <div class="logo" style="left: 10px; top: 42px">
+                    </div> 
+                </div>
+                <div class="nav">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="artmenu">
+                		<li><a href="#"><span class="l"></span><span class="r"></span><span class="t">Dashboard</span></a>
+                			<ul>
+                				<li><a href="#">Customer Requests</a></li>
+                				<li><a href="#">Order Requests</a></li>
+                				<li><a href="#">Feedbacks</a></li>
+                			</ul>
+                		</li>
+                		<li><a href="#"><span class="l"></span><span class="r"></span><span class="t">Master</span></a>
+                			<ul>
+                			    <li><asp:HyperLink runat="server" ID="hlkStaff" NavigateUrl="~/Admin/Staff.aspx">Staff </asp:HyperLink> </li>
+                				<li><asp:HyperLink runat="server" ID="hlkDivisionState" NavigateUrl="~/Admin/DivisionState.aspx">Division/State</asp:HyperLink> </li>
+                				<li><asp:HyperLink runat="server" ID="hlkCityTownship" NavigateUrl="~/Admin/CityTownship.aspx">City/Township</asp:HyperLink> </li>
+                				<li><asp:HyperLink runat="server" ID="hlkBank" NavigateUrl="~/Admin/Bank.aspx">Bank</asp:HyperLink> </li>
+                				<li><asp:HyperLink runat="server" ID="hlkBankAccount" NavigateUrl="~/Admin/BankAccount.aspx">Bank Account</asp:HyperLink> </li>
+                			</ul>
+                		</li>
+                		<li><a href="#"><span class="l"></span><span class="r"></span><span class="t">Plans</span></a>
+                			<ul>
+                				<li><asp:HyperLink runat="server" ID="hlkDeck" NavigateUrl="~/Admin/DeckPlan.aspx">Deck</asp:HyperLink> </li>
+                				<li><asp:HyperLink runat="server" ID="hlkGerden" NavigateUrl="~/Admin/GardenPlan.aspx">Garden</asp:HyperLink> </li>
+                				<li><a href="#">Home</a>
+                					<ul>
+                						<li><asp:HyperLink runat="server" ID="hlkHomeType" NavigateUrl="~/Admin/HomeType.aspx">Home Type</asp:HyperLink> </li>
+                						<li><asp:HyperLink runat="server" ID="hlkRoomType" NavigateUrl="~/Admin/RoomType.aspx">Room Type</asp:HyperLink> </li>
+                						<li><asp:HyperLink runat="server" ID="hlkHome" NavigateUrl="~/Admin/HomePlan.aspx">Home (Entry)</asp:HyperLink> </li>
+                						<li><asp:HyperLink runat="server" ID="hlkListing" NavigateUrl="~/Admin/HomePlanListing.aspx">Home (Listing)</asp:HyperLink> </li>
+                					</ul>
+                				</li>
+                				<li><asp:HyperLink runat="server" ID="hlkAddress" NavigateUrl="~/Admin/Address.aspx">Address</asp:HyperLink> </li>
+                			</ul>
+                		</li>
+                		<li><a href="#"><span class="l"></span><span class="r"></span><span class="t">Reports</span></a></li>
+                		<li><a href="#"><span class="l"></span><span class="r"></span><span class="t"><asp:Label runat="server" ID="lblUser" Text="No User"></asp:Label></span></a>
+                			<ul>
+                				<li><asp:HyperLink runat="server" ID="hlkChangePassword" NavigateUrl="~/Admin/ChangePassword.aspx" >Change password</asp:HyperLink></a></li>
+                				<li><asp:LinkButton runat="server" ID="lkLogout" OnClientClick="javascript:return confirm('are you sure logout?')"
+                				OnClick="Logout_Click" CausesValidation="false" >Log out</asp:LinkButton></li>
+                			</ul>
+                		</li>
+                	</ul>
+                </div>
+                <div class="contentLayout">
+                    <div class="content">
+                    <asp:Label runat="server" id="lblMessage" ForeColor="red"></asp:Label>
+                       <asp:ContentPlaceHolder runat="server" ID="cphBody">
+                       </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="cleared"></div><div class="Footer">
+                    <div class="Footer-inner">
+                        <div class="Footer-text">
+                            <p>
+                                Copyright &copy; 2011 ---. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="Footer-background"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="page-footer"></p>
+    </div>
+</form>
+</body>
+</html>

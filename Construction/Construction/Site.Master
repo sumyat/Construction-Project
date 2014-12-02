@@ -1,0 +1,73 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Construction.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Construction</title>
+    <script type="text/javascript" src="Script/script.js"></script>
+    <link rel="stylesheet" href="Style/style.css" type="text/css" media="screen" />
+</head>
+<body>
+<form runat="server" id="frm">
+<div class="PageBackgroundSimpleGradient">
+    </div>
+    <div class="PageBackgroundGlare">
+        <div class="PageBackgroundGlareImage"></div>
+    </div>
+    <div class="Main">
+        <div class="Sheet">
+            <div class="Sheet-tl"></div>
+            <div class="Sheet-tr"></div>
+            <div class="Sheet-bl"></div>
+            <div class="Sheet-br"></div>
+            <div class="Sheet-tc"></div>
+            <div class="Sheet-bc"></div>
+            <div class="Sheet-cl"></div>
+            <div class="Sheet-cr"></div>
+            <div class="Sheet-cc"></div>
+            <div class="Sheet-body">
+                <div class="Header">
+                    <div class="Header-png"></div>
+                    <div class="Header-jpeg" style="left: 0px; top: 0px"></div>
+                    <div class="logo" style="left: 10px; top: 42px">
+                    </div> 
+                </div>
+                <div class="nav">
+                	<div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="artmenu">
+                		<li><asp:HyperLink runat="server" ID="hlkHome" NavigateUrl="~/Home.aspx"><span class="l"></span><span class="r"></span><span class="t">Home</span></asp:HyperLink> </li>
+                		<li><asp:HyperLink runat="server" ID="hlkAboutus" NavigateUrl="~/ContactUs.aspx"><span class="l"></span><span class="r"></span><span class="t">Contact us</span></asp:HyperLink> </li>
+                		<li><asp:HyperLink runat="server" ID="hlkContactus" NavigateUrl="~/AboutUs.aspx"><span class="l"></span><span class="r"></span><span class="t">About us</span></asp:HyperLink> </li>
+                		<li><a href="#"><span class="l"></span><span class="r"></span><span class="t">Member Area</span></a>
+                			<ul>
+                			    <li><asp:HyperLink runat="server" ID="hlkCustomer" NavigateUrl="~/Registration.aspx">Registration</asp:HyperLink> </li>
+                			    <li><asp:HyperLink runat="server" ID="hlkLogin" NavigateUrl="~/Default.aspx">Login</asp:HyperLink></li>
+                			</ul>
+                		</li>
+                	</ul>
+                </div>
+                <div class="contentLayout">
+                    <div class="content">
+                       <asp:ContentPlaceHolder runat="server" ID="cphBody">
+                       </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="cleared"></div><div class="Footer">
+                    <div class="Footer-inner">
+                        <div class="Footer-text">
+                            <p>
+                                Copyright &copy; 2011 ---. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="Footer-background"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="page-footer"></p>
+    </div>
+</form>
+</body>
+</html>

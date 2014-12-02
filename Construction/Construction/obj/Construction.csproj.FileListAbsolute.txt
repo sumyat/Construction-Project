@@ -1,0 +1,5 @@
+F:\Works\Su Myat Noe Pwint\Construction\Construction\bin\Construction.dll
+F:\Works\Su Myat Noe Pwint\Construction\Construction\bin\Construction.pdb
+F:\Works\Su Myat Noe Pwint\Construction\Construction\obj\Debug\ResolveAssemblyReference.cache
+F:\Works\Su Myat Noe Pwint\Construction\Construction\obj\Debug\Construction.dll
+F:\Works\Su Myat Noe Pwint\Construction\Construction\obj\Debug\Construction.pdb

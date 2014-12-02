@@ -1,0 +1,191 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Data.SqlClient;
+
+namespace Construction.Admin
+{
+    public partial class DivisionState : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (DivisionStateID != string.Empty)
+                    changeUI(Status);
+            }
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            lblMessage.Text = "";
+            switch (btnAdd.Text)
+            {
+                case "Delete":
+                    Delete();
+                    break;
+                case "Update":
+                    Update();
+                    break;
+                default:
+                    Insert();
+                    break;
+            }
+            
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            changeUI('C');
+        }
+
+        #region Helper Methods
+        private void changeUI(Char _status)
+        {
+            switch (_status)
+            {
+                case 'E':
+                    txtCode.Enabled = false;
+                    txtDesp.Enabled = true;
+                    btnAdd.Text = "Update";
+                    btnCancel.Text = "Cancel";
+                    txtCode.Text = Code;
+                    txtDesp.Text = Desp;
+                    break;
+                case 'D':
+                    txtCode.Enabled = false;
+                    txtDesp.Enabled = false;
+                    btnAdd.Text = "Delete";
+                    btnCancel.Text = "No delete";
+                    txtCode.Text = Code;
+                    txtDesp.Text = Desp;
+                    break;
+                default:
+                    txtCode.Enabled = true;
+                    txtDesp.Enabled = true;
+                    btnAdd.Text = "Add";
+                    btnCancel.Text = "Cancel";
+                    txtCode.Text = "";
+                    txtDesp.Text = "";
+                    break;
+            }
+            gvDivisionState.DataBind();
+        }
+        #endregion Helper Methods
+
+        #region Properties
+        public String Code
+        {
+            get
+            {
+                if (Request.QueryString["Code"] != null)
+                    return Request.QueryString["Code"];
+                return string.Empty;
+            }
+        }
+        public String Desp
+        {
+            get
+            {
+                if (Request.QueryString["Desp"] != null)
+                    return Request.QueryString["Desp"];
+                return string.Empty;
+            }
+        }
+        public String DivisionStateID
+        {
+            get
+            {
+                if (Request.QueryString["ID"] != null)
+                    return Request.QueryString["ID"];
+                return string.Empty;
+            }
+        }
+        public Char Status
+        {
+            get
+            {
+                if (Request.QueryString["Status"] != null)
+                    return Request.QueryString["Status"][0];
+                return 'C';
+            }
+        }
+        #endregion Properties
+
+        #region Data Method
+        private SqlConnection connection = new SqlConnection(
+            ConfigurationManager.ConnectionStrings["Construction"].ConnectionString
+            );
+        private SqlCommand command;
+        private void Insert()
+        {
+            try
+            {
+                command = new SqlCommand("DivisionState_Insert", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@Code", SqlDbType.NVarChar).Value = txtCode.Text;
+                command.Parameters.Add("@Desp", SqlDbType.NVarChar).Value = txtDesp.Text;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+                Response.Redirect("~/Admin/DivisionState.aspx");
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+
+        }
+        private void Update()
+        {
+            try
+            {
+                command = new SqlCommand("DivisionState_Update", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@DivisionStateID", SqlDbType.Char, 36).Value = DivisionStateID;
+                command.Parameters.Add("@Code", SqlDbType.NVarChar).Value = txtCode.Text;
+                command.Parameters.Add("@Desp", SqlDbType.NVarChar).Value = txtDesp.Text;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                Response.Redirect("~/Admin/DivisionState.aspx");
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+        }
+        private void Delete()
+        {
+            try
+            {
+                command = new SqlCommand("DivisionState_Delete", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                command.Parameters.Add("@DivisionStateID", SqlDbType.Char, 36).Value = DivisionStateID;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+                Response.Redirect("~/Admin/DivisionState.aspx");
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+        }
+        #endregion Data Method
+    }
+}

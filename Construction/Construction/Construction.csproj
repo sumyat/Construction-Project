@@ -1,0 +1,379 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B3D29984-E2A8-4856-921B-5831E0C4155A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Construction</RootNamespace>
+    <AssemblyName>Construction</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Address.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Address.aspx.designer.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bank.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BankAccount.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>BankAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BankAccount.aspx.designer.cs">
+      <DependentUpon>BankAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CityTownship.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CityTownship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CityTownship.aspx.designer.cs">
+      <DependentUpon>CityTownship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerRequest.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CustomerRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CustomerRequest.aspx.designer.cs">
+      <DependentUpon>CustomerRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DeckPlan.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>DeckPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DeckPlan.aspx.designer.cs">
+      <DependentUpon>DeckPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DivisionState.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>DivisionState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DivisionState.aspx.designer.cs">
+      <DependentUpon>DivisionState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FeedBack.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FeedBack.aspx.designer.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GardenPlan.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>GardenPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GardenPlan.aspx.designer.cs">
+      <DependentUpon>GardenPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomePlan.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>HomePlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomePlan.aspx.designer.cs">
+      <DependentUpon>HomePlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomePlanListing.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>HomePlanListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomePlanListing.aspx.designer.cs">
+      <DependentUpon>HomePlanListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomeType.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>HomeType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HomeType.aspx.designer.cs">
+      <DependentUpon>HomeType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderRequest.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>OrderRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderRequest.aspx.designer.cs">
+      <DependentUpon>OrderRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoomType.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>RoomType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RoomType.aspx.designer.cs">
+      <DependentUpon>RoomType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Staff.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Staff.aspx.designer.cs">
+      <DependentUpon>Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ChangePassword.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\EditProfile.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderStatus.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>OrderStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\OrderStatus.aspx.designer.cs">
+      <DependentUpon>OrderStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PlanOrder.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>PlanOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PlanOrder.aspx.designer.cs">
+      <DependentUpon>PlanOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Master.Master.cs">
+      <DependentUpon>Customer_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Master.Master.designer.cs">
+      <DependentUpon>Customer_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerFeedBack.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>CustomerFeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerFeedBack.aspx.designer.cs">
+      <DependentUpon>CustomerFeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PlanRegistration.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>PlanRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\PlanRegistration.aspx.designer.cs">
+      <DependentUpon>PlanRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dsConstruction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConstruction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Image.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Image.aspx.designer.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff.Master.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff.Master.designer.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Thankyou.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Thankyou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Thankyou.aspx.designer.cs">
+      <DependentUpon>Thankyou.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Address.aspx" />
+    <Content Include="Admin\Bank.aspx" />
+    <Content Include="Admin\BankAccount.aspx" />
+    <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="Admin\CityTownship.aspx" />
+    <Content Include="Admin\CustomerRequest.aspx" />
+    <Content Include="Admin\DeckPlan.aspx" />
+    <Content Include="Admin\DivisionState.aspx" />
+    <Content Include="Admin\FeedBack.aspx" />
+    <Content Include="Admin\GardenPlan.aspx" />
+    <Content Include="Admin\HomePlan.aspx" />
+    <Content Include="Admin\HomePlanListing.aspx" />
+    <Content Include="Admin\HomeType.aspx" />
+    <Content Include="Admin\OrderRequest.aspx" />
+    <Content Include="Admin\RoomType.aspx" />
+    <Content Include="Admin\Staff.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Image.aspx" />
+    <Content Include="Script\script.js" />
+    <Content Include="Staff.Master" />
+    <Content Include="Style\images\01.png" />
+    <Content Include="Style\images\02.png" />
+    <Content Include="Style\images\03.png" />
+    <Content Include="Style\images\BlockContent-h.png" />
+    <Content Include="Style\images\BlockContent-s.png" />
+    <Content Include="Style\images\BlockContent-v.png" />
+    <Content Include="Style\images\BlockContentBullets.png" />
+    <Content Include="Style\images\BlockHeader.png" />
+    <Content Include="Style\images\BlockHeaderIcon.png" />
+    <Content Include="Style\images\Button.png" />
+    <Content Include="Style\images\contact.jpg" />
+    <Content Include="Style\images\Footer.png" />
+    <Content Include="Style\images\Header.jpg" />
+    <Content Include="Style\images\Header.png" />
+    <Content Include="Style\images\MenuItem.png" />
+    <Content Include="Style\images\MenuSeparator.png" />
+    <Content Include="Style\images\nav.png" />
+    <Content Include="Style\images\Page-BgGlare.png" />
+    <Content Include="Style\images\Page-BgSimpleGradient.jpg" />
+    <Content Include="Style\images\PostBullets.png" />
+    <Content Include="Style\images\PostQuote.png" />
+    <Content Include="Style\images\rssIcon.png" />
+    <Content Include="Style\images\Sheet-h.png" />
+    <Content Include="Style\images\Sheet-s.png" />
+    <Content Include="Style\images\Sheet-v.png" />
+    <Content Include="Style\images\spacer.gif" />
+    <Content Include="Style\images\spectacles.gif" />
+    <Content Include="Style\images\subitem-bg.png" />
+    <Content Include="Style\style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Customer\ChangePassword.aspx" />
+    <Content Include="Customer\CustomerFeedBack.aspx" />
+    <Content Include="Customer\EditProfile.aspx" />
+    <Content Include="Customer\OrderStatus.aspx" />
+    <Content Include="Customer\PlanOrder.aspx" />
+    <Content Include="Customer\PlanRegistration.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="Customer_Master.Master" />
+    <Content Include="Style\images\Map.png" />
+    <Content Include="Thankyou.aspx" />
+    <None Include="dsConstruction.xsc">
+      <DependentUpon>dsConstruction.xsd</DependentUpon>
+    </None>
+    <None Include="dsConstruction.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConstruction.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsConstruction.xss">
+      <DependentUpon>dsConstruction.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49316</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
